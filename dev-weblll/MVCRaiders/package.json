@@ -1,0 +1,28 @@
+{
+  "name": "mvcraiders",
+  "version": "1.0.0",
+  "description": "Apresentação do projeto Raiders Academy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "swagger": "node swagger.js"
+  },
+  "keywords": [
+    "MVC",
+    "raiders",
+    "projeto",
+    "ejs"
+  ],
+  "author": "Evellin Lima",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.3",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
+  }
+}

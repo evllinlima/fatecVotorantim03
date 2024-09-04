@@ -1,0 +1,1 @@
+const controllerTemp = require('../models/temperatura')
