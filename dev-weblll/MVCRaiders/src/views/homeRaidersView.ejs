@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -12,31 +12,52 @@
     <title>Raiders Academy</title>
 </head>
 
-<body>
-    <h1> Raiders Academy </h1>
-
-    <p>O projeto visa o desenvolvimento de uma plataforma web de fórum interativo entre os estudantes. Com tópicos
-        separados por matérias do curso, proporcionando um ambiente focado e eficiente para cada disciplina, criando uma
-        comunidade de conhecimento compartilhado.
-        Nesse ambiente, podem-se criar perguntas sobre qualquer tópico da matéria, estimulando a participação ativa dos
-        estudantes.
-    </p>
-    <form action="/save" method="post">
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" name="nome"
-                placeholder="Insira seu nome">
+<body class="bg-light">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-4" href="#">Raiders Academy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link fs-3 active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link fs-3" href="/admin">Admin</a>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">E-mail:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" name="email"
-                placeholder="Insira seu e-mail">
-        </div>
-    </form>
+    </nav>
 
-    <div class="col-auto">
-        <button type="submit" class="btn btn-primary mb-3">Cadastre-se</button>
+    <div class="container mt-5">
+        <div class="card shadow-lg p-4 rounded-4" style="background-color: #e3f2fd;">
+            <div class="card-body">
+                <h1 class="text-center fs-2 mb-4">Bem-vindo à Raiders Academy</h1>
+                <p class="lead fs-4 text-center">
+                    O projeto visa o desenvolvimento de uma plataforma web de fórum interativo entre os estudantes. Com tópicos
+                    separados por matérias do curso, proporcionando um ambiente focado e eficiente para cada disciplina, criando uma
+                    comunidade de conhecimento compartilhado.
+                </p>
+                <p class="text-center">Crie perguntas sobre qualquer tópico da matéria e estimule a participação ativa dos estudantes!</p>
+                
+                <form action="/save" method="post" class="mt-4">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Insira seu nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Insira seu e-mail" required>
+                    </div>
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-primary">Cadastre-se</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
+
 
 </html>

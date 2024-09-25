@@ -13,10 +13,101 @@
   "paths": {
     "/": {
       "get": {
-        "description": "",
+        "tags": [
+          "Home"
+        ],
+        "summary": "Exibe a página inicial",
+        "description": "Mostra a página inicial com os campos para efetuar registro",
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "Página carregada com sucesso"
+          }
+        }
+      }
+    },
+    "/save": {
+      "post": {
+        "tags": [
+          "Home"
+        ],
+        "summary": "Salva um novo cadastro",
+        "description": "Pega os dados do formulário de cadastro e envia para ser salvo",
+        "responses": {
+          "200": {
+            "description": "Cadastro efetuado com sucesso"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "nome": {
+                    "example": "any"
+                  },
+                  "email": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Exibe a área de administração",
+        "description": "Mostra uma lista de todos cadastros, salvos com opção de exclusão.",
+        "responses": {
+          "200": {
+            "description": "Página carregada com sucesso"
+          }
+        }
+      }
+    },
+    "/admin/delete": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Exclui um Cadastro",
+        "description": "Exclui o cadastro em que foi clicado no excluir atraves do email cadastrado.",
+        "responses": {
+          "200": {
+            "description": "Cadastro excluido com sucesso"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/totalCadastros": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "summary": "Lista o total de cadastros",
+        "description": "Exibe a lista de cadastros e o seu total",
+        "responses": {
+          "200": {
+            "description": "Dados carregados com sucesso"
           }
         }
       }

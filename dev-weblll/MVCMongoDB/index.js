@@ -7,6 +7,7 @@ app.use(bodyParset.json());
 app.use(bodyParset.urlencoded({ extended: false }));
 
 const userRoute = require('./src/routes/userRoute');
+const projectRoute = require('./src/routes/projectRoute');
 
 // Configurando o acesso ao banco de dados
 const mongoose = require('mongoose')
@@ -23,4 +24,5 @@ app.listen(3000, () => {
 })
 
 app.use(userRoute)
+app.use(projectRoute)
 
