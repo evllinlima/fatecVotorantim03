@@ -1,10 +1,13 @@
 const express = require('express');
 const bodyParset = require('body-parser');
 const app = express();
+const swaggerUi = require('swagger-ui-express');
+const swaggerFile = require('./swagger-output.json');
 
 // o body parset deve estar sempre acima da rota.
 app.use(bodyParset.json());
 app.use(bodyParset.urlencoded({ extended: false }));
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 const userRoute = require('./src/routes/userRoute');
 const projectRoute = require('./src/routes/projectRoute');
