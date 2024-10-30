@@ -19,6 +19,37 @@ public class Cad_Historico extends javax.swing.JFrame {
     public Cad_Historico() {
         initComponents();
     }
+    String operacaoAtivaGlobal = "Nenhum";
+
+    public Cad_Historico(String operacaoAtiva) {
+        initComponents();
+
+        operacaoAtivaGlobal = operacaoAtiva;  // Setar a operacaoAtivaGlobal com o parâmetro recebido para utilização em toda a classe
+        String operacao = "Incluir";                    // String para verificar qual é operação que será configurada
+        if (operacaoAtiva.equals(operacao)) {
+            jLabel1.setVisible(true);                      // Para inclusão serão liberados todos os componentes da tela como true para ficarem visíveis
+            jLabel2.setVisible(true);
+            jTextField1.setVisible(true);
+            jTextField2.setVisible(true);
+            jButton1.setText("Incluir");
+        }
+        operacao = "Alterar";                               // defini a operação como Alterar os dados de um registro
+        if (operacaoAtiva.equals(operacao)) {       // para alteração deverá ser setado todos os componentes como false para não visualizar
+            jLabel1.setVisible(true);                       // deixando somente o label e o TextField do Id para pesquisar como true (visível).
+            jLabel2.setVisible(false);
+            jTextField1.setVisible(true);
+            jTextField2.setVisible(false);
+            jButton1.setText("Alterar");
+        }
+        operacao = "Excluir";                                // defini a operação como Excluir um registro
+        if (operacaoAtiva.equals(operacao)) {       // para exclusão deverá ser setado todos os componentes como false para não visualizar
+            jLabel1.setVisible(true);                       // deixando somente o label e o TextField do Id para pesquisar como true (visível).
+            jLabel2.setVisible(false);
+            jTextField1.setVisible(true);
+            jTextField2.setVisible(false);
+            jButton1.setText("Excluir");
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -96,18 +127,15 @@ public class Cad_Historico extends javax.swing.JFrame {
         historicos dados_Historico = new historicos();
         dados_Historico.setIdHis(Integer.parseInt((jTextField1.getText())));
         dados_Historico.setDesHis(jTextField2.getText());
-        
-        
-        
-        
+
         connectDAO objcon = new connectDAO();
-        
-        objcon.insereRegistroJFBD("HISTORICOS",dados_Historico.dadosSQLValue());
-        
+
+        objcon.insereRegistroJFBD("HISTORICOS", dados_Historico.dadosSQLValue());
+
         jTextField1.setText("");
         jTextField2.setText("");
-        
-        
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

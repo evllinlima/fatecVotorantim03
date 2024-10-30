@@ -16,11 +16,10 @@ public class Cad_Cliente extends javax.swing.JFrame {
     /**
      * Creates new form Cad_Cliente
      */
-    String operacaoAtivaGlobal = "Nenhum";
-
     public Cad_Cliente() {
         initComponents();
     }
+    String operacaoAtivaGlobal = "Nenhum";
 
     public Cad_Cliente(String operacaoAtiva) {
         initComponents();

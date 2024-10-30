@@ -93,9 +93,19 @@ public class menu extends javax.swing.JFrame {
         conta.add(jMenuItem2);
 
         jMenuItem3.setText("Alterar");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         conta.add(jMenuItem3);
 
         jMenuItem14.setText("Excluir");
+        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem14ActionPerformed(evt);
+            }
+        });
         conta.add(jMenuItem14);
 
         jMenuBar1.add(conta);
@@ -147,6 +157,11 @@ public class menu extends javax.swing.JFrame {
         Usuario.add(jMenuItem8);
 
         jMenuItem16.setText("Excluir");
+        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem16ActionPerformed(evt);
+            }
+        });
         Usuario.add(jMenuItem16);
 
         jMenuBar1.add(Usuario);
@@ -154,12 +169,27 @@ public class menu extends javax.swing.JFrame {
         jMenu2.setText("Movimentacao");
 
         jMenuItem9.setText("Cadastrar");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem9);
 
         jMenuItem10.setText("Alterar");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem10);
 
         jMenuItem17.setText("Excluir");
+        jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem17ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem17);
 
         jMenuBar1.add(jMenu2);
@@ -167,12 +197,27 @@ public class menu extends javax.swing.JFrame {
         jMenu5.setText("Historico");
 
         jMenuItem11.setText("Cadastrar");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem11);
 
         jMenuItem12.setText("Alterar");
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem12);
 
         jMenuItem18.setText("Excluir");
+        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem18ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem18);
 
         jMenuBar1.add(jMenu5);
@@ -200,15 +245,21 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuICadCliActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
+        String operacao = "Incluir";
+        Cad_Conta_Corrente acesso_contaCorrente = new Cad_Conta_Corrente(operacao);
+        acesso_contaCorrente.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
+        String operacao = "Incluir";
+        Cad_Usuario acesso_usuario = new Cad_Usuario(operacao);
+        acesso_usuario.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        // TODO add your handling code here:
+        String operacao = "Alterar";
+        Cad_Usuario acesso_usuario = new Cad_Usuario(operacao);
+        acesso_usuario.setVisible(true);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuAltCliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuAltCliActionPerformed
@@ -240,6 +291,60 @@ public class menu extends javax.swing.JFrame {
         Cad_Agencia acesso_agencia = new Cad_Agencia(operacao);
         acesso_agencia.setVisible(true);
     }//GEN-LAST:event_jMenuItem15ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        String operacao = "Alterar";
+        Cad_Conta_Corrente acesso_contaCorrente = new Cad_Conta_Corrente(operacao);
+        acesso_contaCorrente.setVisible(true);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+        String operacao = "Excluir";
+        Cad_Conta_Corrente acesso_contaCorrente = new Cad_Conta_Corrente(operacao);
+        acesso_contaCorrente.setVisible(true);
+    }//GEN-LAST:event_jMenuItem14ActionPerformed
+
+    private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
+        String operacao = "Excluir";
+        Cad_Usuario acesso_usuario = new Cad_Usuario(operacao);
+        acesso_usuario.setVisible(true);
+    }//GEN-LAST:event_jMenuItem16ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        String operacao = "Incluir";
+        Cad_Movimentacao acesso_movimentacao = new Cad_Movimentacao(operacao);
+        acesso_movimentacao.setVisible(true);
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        String operacao = "Alterar";
+        Cad_Movimentacao acesso_movimentacao = new Cad_Movimentacao(operacao);
+        acesso_movimentacao.setVisible(true);
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
+
+    private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
+        String operacao = "Excluir";
+        Cad_Movimentacao acesso_movimentacao = new Cad_Movimentacao(operacao);
+        acesso_movimentacao.setVisible(true);
+    }//GEN-LAST:event_jMenuItem17ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        String operacao = "Incluir";
+        Cad_Historico acesso_historico = new Cad_Historico(operacao);
+        acesso_historico.setVisible(true);
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+        String operacao = "Alterar";
+        Cad_Historico acesso_historico = new Cad_Historico(operacao);
+        acesso_historico.setVisible(true);
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
+
+    private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
+         String operacao = "Excluir";
+        Cad_Historico acesso_historico = new Cad_Historico(operacao);
+        acesso_historico.setVisible(true);
+    }//GEN-LAST:event_jMenuItem18ActionPerformed
 
     /**
      * @param args the command line arguments
